@@ -1,0 +1,11 @@
+.navbar-light
+{
+    background-color:burlywood;
+}
+.font-styling
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:17px;
+    color:black;
+    font-weight: bold;
+}

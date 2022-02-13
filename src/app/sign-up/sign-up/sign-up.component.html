@@ -1,83 +1,70 @@
-
-<style> 
-    .spacer 
-    { 
-    flex: 1; 
+<style>
+    .spacer {
+        flex: 1;
     }
-    .toolbar 
-    {
-     position: absolute; 
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    height: 60px; 
-    display: flex; 
-    align-items: center; 
-    background-color: #1976d2; 
-    color: white; 
-    font-weight: 600; 
-    } 
-    .content 
-    { 
-    display: flex; 
-    margin: 82px auto 32px; 
-    padding: 0 16px; 
-    max-width: 960px; 
-    flex-direction: column; 
-    align-items: center; 
-    } 
-    </style>
-    
-    <div class="display flex-column">
-        <div class="container center">
-            <h2 class="text-center font-styling">Online Registration-Sign up</h2>
-            <form class="form-group" [formGroup]="registerForm">
-                <div class="form-group">
-                    <label for="name" class="default-font"> First Name</label>
-                    <input type="text" class="form-control default-font" formControlName="firstName">
-                </div>
-                <div class="form-group">
-                    <label for="name" class="default-font"> Last Name</label>
-                    <input type="text" class="form-control default-font" formControlName="lastName">
-                </div>
-                <div class="form-group"> <label for="name" class="default-font">Nationality</label>
-                    <select class="form-control" formControlName="country">
-                        <option selected class="default-font">Select your Nationality</option>
-                        <option *ngFor="let ctry of countries">{{ctry}}</option>
-                    </select>
-                    
-                </div>
-                <div class="form-group">
-                    <label for="mobile" class="default-font"> Mobile Number</label>
-                    <input type="number" class="form-control default-font" formControlName="mobileNumber">
-                </div>
-                
-                <div class="form-group"> 
-                    <label for="gender" class="default-font">Gender</label>
-                    <div class="form-check-inline">
-                        <input #gender class="form-check-input" type="radio" name="gender" id="gender" value="option1" [checked]="saveGender" 
-                        (change)="onGenderMaleChanged(gender.checked)" >
-                        <label class="form-check-label" for="gender">
-                          Male
-                        </label>
-                    </div>
-                    <div class="form-check-inline">
-                        <input #gender1 class="form-check-input" [checked]="saveGender1" 
-                        (change)="onGenderFemaleChanged(gender1.checked)" type="radio" name="gender1" id="gender1" value="option2">
-                        <label class="form-check-label" for="gender1">
-                          Female
-                        </label>
-                      </div>
-                    
-                </div>
-                <div class="form-group"> <label for="dob" class="default-font">Date of Birth</label>
-                    <input type="date" class="form-control default-font" formControlName="dob">
-                </div>
-    
-                <button type="submit" id=register class="btn btn-primary default-font" (click)="register()">Register
-                    </button>
-            </form>
-    
-        </div>
+
+    .toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        background-color: #1976d2;
+        color: white;
+        font-weight: 600;
+    }
+
+    .content {
+        display: flex;
+        margin: 82px auto 32px;
+        padding: 0 16px;
+        max-width: 960px;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+<div class="display flex-column">
+    <div class="container center">
+        <h2 class="text-center font-styling">Online Registration-Sign up</h2>
+        <form class="form-group" [formGroup]="registerForm">
+            <div class="form-group">
+                <label for="name" class="default-font"> First Name</label>
+                <input type="text" class="form-control default-font" formControlName="firstName">
+            </div>
+            <div class="form-group">
+                <label for="name" class="default-font"> Last Name</label>
+                <input type="text" class="form-control default-font" formControlName="lastName">
+            </div>
+            <div class="form-group"> <label for="name" class="default-font">Nationality</label>
+                <select class="form-control" formControlName="country">
+                    <option selected class="default-font">Select your Nationality</option>
+                    <option *ngFor="let ctry of countries">{{ctry}}</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="mobile" class="default-font"> Mobile Number</label>
+                <input type="number" class="form-control default-font" formControlName="mobileNumber">
+            </div>
+
+
+            <div class="form-group">
+                <label for="gender" class="default-font">Gender</label>
+                <input type="radio" value="Female" formControlName="gender"> Female
+                <input type="radio" value="Male" formControlName="gender"> Male
+            </div>
+
+
+            <div class="form-group"> <label for="dob" class="default-font">Date of Birth</label>
+                <input type="date" class="form-control default-font" formControlName="dob">
+            </div>
+
+            <button type="submit" id=register class="btn btn-primary default-font" (click)="register()">Register
+            </button>
+        </form>
+
     </div>
-   
+</div>

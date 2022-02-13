@@ -1,0 +1,22 @@
+{
+  "Users": [
+    {
+      "firstName": "Don",
+      "lastName": "Micheal",
+      "country": "Indian",
+      "mobileNumber": "12345",
+      "gender": "Male",
+      "dob": "2018-02-25",
+      "id": 1
+    },
+    {
+      "firstName": "cindu",
+      "lastName": "j",
+      "mobileNumber": 4567238908,
+      "dob": "2020-09-04",
+      "gender": "Female",
+      "country": "Indian",
+      "id": 2
+    }
+  ]
+}
