@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable } from 'rxjs';
 import { Users } from './Users';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Content } from './Content';
 @Injectable({
   providedIn: 'root'
 })
@@ -22,5 +23,13 @@ export class RegisterService {
     })
     
   }
+  AddUpdateContent(pagecontent: Content) {  
+    
+    return this.http.post(this.baseURL +'Content', pagecontent);  
+}  
+Getcontent() {  
+  
+  return this.http.get(this.baseURL +'Content');  
+}
  
 }
